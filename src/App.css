@@ -21,7 +21,7 @@ body{
     background:hsl(180, 14%, 20%)
 }
 .bg{
-    fill-opacity: 0.1;
+    background-color: rgba(34, 197, 94, 0.127);
 }
 @media (max-width: 640px){
    .diff{
