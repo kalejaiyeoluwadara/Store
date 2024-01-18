@@ -23,6 +23,9 @@ body{
 .bg{
     background-color: rgba(34, 197, 94, 0.127);
 }
+.bg2{
+    background-color: red;
+}
 @media (max-width: 640px){
    .diff{
     position: absolute;

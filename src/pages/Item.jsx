@@ -20,7 +20,7 @@ function Item({
       onClick={() => {
         setActive(!active);
       }}
-      className={`sm:w-[95%] relative sm:h-[120px] h-auto] sm:py-0 py-4  transition  ${
+      className={`sm:w-[95%] relative sm:h-[120px] h-auto] sm:py-0 py-4  transition  duration-300 ${
         active && "border-l-[5px] border-green-700"
       } w-full flex sm:flex-row flex-col sm:justify-between   rounded-[6px]  items-center px-4 shadow-md hover:border-l-[5px] hover:border-green-700 bg-gray-200 `}
     >
@@ -50,7 +50,7 @@ function Item({
           </section>
 
           {/* Details section  */}
-          <section className="flex font-normal text-gray-600 gap-3">
+          <section className="flex w-full sm:mt-0 mt-3 sm:mb-0 mb-1 font-normal text-gray-600 gap-3">
             <span>{postedAt}</span>
             <span>{contract}</span>
             <span>{location}</span>
@@ -78,7 +78,7 @@ export default Item;
 // language box
 const Box = ({ props }) => {
   return (
-    <div className="sm:px-2 sm:py-1 px-3 py-3 font-[600] cursor-pointer  bg-opacity-[0.3] flex items-center justify-center bg text-green-700 rounded-[3px] ">
+    <div className="sm:px-2 sm:py-1 px-3 py-[10px] transition duration-300 font-[600] cursor-pointer   flex items-center justify-center bg text-green-700 hover:bg-green-600 hover:text-white rounded-[8px] ">
       <p>{props}</p>
     </div>
   );
@@ -87,7 +87,7 @@ const NewP = ({ type }) => {
   return (
     <div
       className={` text-white uppercase text-[11px] flex items-center justify-center px-3 font-[600] py-[2px] rounded-[15px] ${
-        type === "New!" ? "bg-green-700" : "bg-black "
+        type === "New!" ? "bg-green-800" : "bg-black "
       }`}
     >
       <p>{type}</p>

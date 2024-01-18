@@ -27,6 +27,7 @@ function Content() {
             postedAt={postedAt}
             contract={contract}
             languages={languages}
+            location={location}
             featured={featured}
             isNew={isNew}
             level={level}
