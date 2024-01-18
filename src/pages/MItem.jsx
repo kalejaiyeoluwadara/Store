@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // import img from "../assets/images/myhome.svg";
-function Item({
+function MItem({
   id,
   company,
   logo,
@@ -14,34 +14,26 @@ function Item({
   tools,
   level,
 }) {
-  const [active, setActive] = useState(false);
   return (
-    <div
-      onClick={() => {
-        setActive(!active);
-      }}
-      className={`sm:w-[95%] relative sm:h-[120px] h-auto] sm:py-0 py-4  transition  ${
-        active && "border-l-[5px] border-green-700"
-      } w-full flex sm:flex-row flex-col sm:justify-between   rounded-[6px]  items-center px-4 shadow-md hover:border-l-[5px] hover:border-green-700 bg-gray-200 `}
-    >
+    <div className="sm:w-[95%] w-full flex justify-between  h-[120px] rounded-[4px]  items-center px-4 shadow-md bg-gray-200 ">
       {/* Subisdary first div */}
-      <div className="flex w-full sm:flex-row flex-col items-center gap-1">
+      <div className="flex items-center gap-1">
         {/* image */}
         <div>
           <img
             src={logo}
-            className="h-[50px] sm:relative sm:mr-4 sm:top-0 sm:bottom-0 absolute left-6 -top-6 w-[50px] rounded-[50%] bg-black "
+            className="h-[50px] w-[50px] rounded-[50%] bg-black "
             alt=""
           />
         </div>
         {/* Middle content */}
 
         {/* Main div */}
-        <div className="flex sm:mt-0  mt-8 ml-4 sm:justify-normal sm:w-auto w-full flex-col">
+        <div className="flex ml-4 flex-col">
           {/* Company first section  */}
           <section className="flex mb-1 items-center gap-3">
             <p className="font-[600] text-green-600 ">{company}</p>
-            {isNew && <NewP type={"New!"} />}
+            {isNew && <NewP type={"New"} />}
             {featured && <NewP type={"Premium"} />}
           </section>
           {/* Title section */}
@@ -59,10 +51,7 @@ function Item({
       </div>
 
       {/* Languages */}
-      <div className="flex sm:mt-o relative px-2  flex-wrap mt-6 sm:justify-end sm:w-full w-full justify-start sm:gap-2 gap-4 ">
-        <div className="w-full sm:hidden visible   absolute -top-4  h-10 ">
-          <hr className="bg-gray-400 w-full h-[3px] " />
-        </div>
+      <div className="flex gap-2">
         {languages.map((prop) => {
           return <Box props={prop} />;
         })}
@@ -78,7 +67,7 @@ export default Item;
 // language box
 const Box = ({ props }) => {
   return (
-    <div className="sm:px-2 sm:py-1 px-3 py-3 font-[600] cursor-pointer bg-green-500 bg-opacity-[0.3] flex items-center justify-center text-green-700 rounded-[3px] ">
+    <div className="px-2 py-1 bg-green-500 bg-opacity-25 flex items-center justify-center text-green-700 rounded-[3px] ">
       <p>{props}</p>
     </div>
   );
@@ -86,8 +75,8 @@ const Box = ({ props }) => {
 const NewP = ({ type }) => {
   return (
     <div
-      className={` text-white uppercase text-[11px] flex items-center justify-center px-3 font-[600] py-[2px] rounded-[15px] ${
-        type === "New!" ? "bg-green-700" : "bg-black "
+      className={` text-white text-[11px] flex items-center justify-center px-3 py-[2px] rounded-[15px] ${
+        type === "New" ? "bg-green-700" : "bg-black "
       }`}
     >
       <p>{type}</p>
