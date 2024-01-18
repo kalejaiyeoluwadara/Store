@@ -20,6 +20,9 @@ body{
 .dgv{
     background:hsl(180, 14%, 20%)
 }
+.bg{
+    fill-opacity: 0.1;
+}
 @media (max-width: 640px){
    .diff{
     position: absolute;

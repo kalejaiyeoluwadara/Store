@@ -78,7 +78,7 @@ export default Item;
 // language box
 const Box = ({ props }) => {
   return (
-    <div className="sm:px-2 sm:py-1 px-3 py-3 font-[600] cursor-pointer bg-green-500 bg-opacity-[0.3] flex items-center justify-center text-green-700 rounded-[3px] ">
+    <div className="sm:px-2 sm:py-1 px-3 py-3 font-[600] cursor-pointer bg-green-500 bg-opacity-[0.3] flex items-center justify-center bgtext-green-700 rounded-[3px] ">
       <p>{props}</p>
     </div>
   );
