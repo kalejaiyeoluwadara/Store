@@ -86,6 +86,9 @@ const Box = ({ props }) => {
     <div
       onClick={() => {
         setActives(!actives);
+        setFilter((prev) => {
+          return [...prev, props];
+        });
       }}
       className={`sm:px-2 sm:py-1 px-3 py-[10px] transition duration-300 font-[600] cursor-pointer flex items-center justify-center  ${
         !actives ? "bg text-green-700" : "bg-green-600 text-white"
