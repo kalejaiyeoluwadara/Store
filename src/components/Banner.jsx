@@ -3,7 +3,7 @@ import Ban from "./Ban";
 import { useGlobal } from "../context";
 
 function Banner() {
-  const { filters, setFilters } = useGlobal();
+  const { filters, SetFilters } = useGlobal();
   return (
     <div className="absolute top-20  flex items-center justify-center w-screen ">
       <section className="w-[80%] py-4 flex items-center justify-start px-4 z-10 shadow-md bg-white h-auto rounded-[4px] ">
