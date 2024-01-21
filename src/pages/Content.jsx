@@ -3,7 +3,7 @@ import Item from "./Item";
 import data from "../../data.json";
 function Content() {
   return (
-    <div className="p-10 flex items-center justify-center flex-col sm:gap-5 gap-12 ">
+    <div className="p-10 flex mt-10 items-center justify-center flex-col sm:gap-5 gap-12 ">
       {data.map((item) => {
         const {
           id,
