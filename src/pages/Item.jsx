@@ -81,12 +81,12 @@ export default Item;
 
 const Box = ({ props }) => {
   const [actives, setActives] = useState(false);
-  const { filter, setFilter } = useGlobal();
+  const { filters, setFilters } = useGlobal();
   return (
     <div
       onClick={() => {
         setActives(!actives);
-        setFilter((prev) => {
+        setFilters((prev) => {
           return [...prev, props];
         });
       }}

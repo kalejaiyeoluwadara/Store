@@ -1,12 +1,17 @@
 import React from "react";
 import Ban from "./Ban";
+import { useGlobal } from "../context";
 
 function Banner() {
+  const { filters, setFilters } = useGlobal();
   return (
     <div className="absolute top-20  flex items-center justify-center w-screen ">
-      <section className="w-[80%] flex items-center justify-start px-4 z-10 shadow-md bg-white h-[9vh] rounded-[4px] ">
-        <Ban />
+      <section className="w-[80%] py-4 flex items-center justify-start px-4 z-10 shadow-md bg-white h-auto rounded-[4px] ">
+        {filters.map((id) => {
+          return <Ban prop={prop} />;
+        })}
       </section>
+      <p className="text-green-600">clear</p>
     </div>
   );
 }
