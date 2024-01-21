@@ -7,7 +7,7 @@ import { useGlobal } from "../context";
 function Home() {
   const { filters } = useGlobal();
   return (
-    <div className="min-h-screen bg-gray-100 w-screen ">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center flex-col overflow-x-hidden w-screen ">
       <Nav />
       <Content />
       {filters.length > 0 && <Banner />}
