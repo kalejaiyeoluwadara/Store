@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useGlobal } from "../context";
 // import img from "../assets/images/myhome.svg";
 function Item({
   id,
@@ -15,6 +16,7 @@ function Item({
   level,
 }) {
   const [active, setActive] = useState(false);
+
   return (
     <div
       onClick={() => {
@@ -76,18 +78,20 @@ function Item({
 
 export default Item;
 // language box
-const [active, setActive] = useState(false);
+
 const Box = ({ props }) => {
+  const [actives, setActives] = useState(false);
+  const { filter, setFilter } = useGlobal();
   return (
     <div
       onClick={() => {
-        setActive(true);
+        setActives(!actives);
       }}
       className={`sm:px-2 sm:py-1 px-3 py-[10px] transition duration-300 font-[600] cursor-pointer flex items-center justify-center  ${
-        !active ? "bg text-green-700" : "bg-green-600 text-white"
+        !actives ? "bg text-green-700" : "bg-green-600 text-white"
       } hover:bg-green-600 hover:text-white rounded-[8px] `}
     >
-      <p>{active}</p>
+      <p>{props}</p>
     </div>
   );
 };
@@ -102,3 +106,4 @@ const NewP = ({ type }) => {
     </div>
   );
 };
+//BU_cod3l.1
