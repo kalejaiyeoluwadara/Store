@@ -11,10 +11,12 @@ function Content() {
     }
 
     // Check if any language in filters array is present in the item's languages
-    return filters.some((filter) => item.languages.includes(filter));
+    return filters.some(
+      (filter) => item.languages.includes(filter) || item.tools.includes(filter)
+    );
   });
   return (
-    <div className="p-10 mt-40 flex  items-center justify-center flex-col sm:gap-5 gap-12 ">
+    <div className="p-10 mt-40 flex w-full items-center justify-center flex-col sm:gap-5 gap-12 ">
       {filteredData.map((item) => {
         const {
           id,
