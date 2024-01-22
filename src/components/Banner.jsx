@@ -11,7 +11,14 @@ function Banner() {
           return <Ban key={d} prop={id} />;
         })}
       </section>
-      <p className="text-green-600">clear</p>
+      <p
+        onClick={() => {
+          SetFilters([]);
+        }}
+        className="text-green-600"
+      >
+        clear
+      </p>
     </div>
   );
 }
