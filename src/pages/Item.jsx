@@ -22,6 +22,7 @@ function Item({
       onClick={() => {
         setActive(!active);
       }}
+      key={id}
       className={`sm:w-[95%] relative sm:h-[120px] h-auto] sm:py-0 py-4  transition  duration-300 ${
         active && "border-l-[5px] border-green-700"
       } w-full flex sm:flex-row flex-col sm:justify-between   rounded-[6px]  items-center px-4 shadow-md hover:border-l-[5px] hover:border-green-700 bg-gray-200 `}
