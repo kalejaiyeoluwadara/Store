@@ -26,7 +26,7 @@ Your users should be able to:
 
 #### Option 1
 
-Filter job listings based on the categories using the HTML `data-` attribute. In this option, you'd use the hardcoded content that already exists in the [index.html](./index.html) file.
+Filter job listings based on the categories using the HTML `data-` attribute. In this option, you'd use the hardcoded content that already exists in the file.
 
 The categories are:
 
